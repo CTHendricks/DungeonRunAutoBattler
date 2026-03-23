@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="dungeon_run_auto_battler"
+run/main_scene="uid://dttwfr2rmpx7e"
+config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+InformationDB="*uid://4xp8xvxnksxl"
+RosterManager="*uid://tmbvmaoxcnfi"
+BattleManager="*uid://bvl5xc7fgih4m"
+GameManager="*uid://ca0vj0pgcgok6"
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "green",
+"res://data/": "purple",
+"res://scenes/": "red",
+"res://scripts/": "blue"
+}
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="UnitData" format=3 uid="uid://cwe6o1jrh0ar6"]
+
+[ext_resource type="Script" uid="uid://dv48pa308rwf4" path="res://scripts/resources/UnitData.gd" id="1_ottvu"]
+
+[resource]
+script = ExtResource("1_ottvu")
+name = "Slime"
+base_health = 3
+base_attack = 1

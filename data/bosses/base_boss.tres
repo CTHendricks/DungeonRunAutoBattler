@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BossData" format=3 uid="uid://bgu5xycrflmx6"]
+
+[ext_resource type="Script" uid="uid://dv48pa308rwf4" path="res://scripts/resources/UnitData.gd" id="1_1o0y3"]
+[ext_resource type="Resource" uid="uid://cwe6o1jrh0ar6" path="res://data/enemies/slime.tres" id="2_46ddi"]
+[ext_resource type="Script" uid="uid://broqt2nascc1r" path="res://scripts/resources/BossData.gd" id="2_i8esa"]
+
+[resource]
+script = ExtResource("2_i8esa")
+name = "base_boss"
+enemy_team = Array[ExtResource("1_1o0y3")]([ExtResource("2_46ddi")])
