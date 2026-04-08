@@ -22,6 +22,13 @@ RosterManager="*uid://tmbvmaoxcnfi"
 BattleManager="*uid://bvl5xc7fgih4m"
 GameManager="*uid://ca0vj0pgcgok6"
 
+[display]
+
+window/size/viewport_width=256
+window/size/viewport_height=144
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [file_customization]
 
 folder_colors={
@@ -31,10 +38,33 @@ folder_colors={
 "res://scripts/": "blue"
 }
 
+[input]
+
+left_mouse={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(372, 40),"global_position":Vector2(391, 136),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+scroll_up={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":8,"position":Vector2(429, 33),"global_position":Vector2(448, 129),"factor":0.03000183,"button_index":4,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+scroll_down={
+"deadzone": 0.2,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":16,"position":Vector2(828, 11),"global_position":Vector2(847, 107),"factor":0.03000183,"button_index":5,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+
+[layer_names]
+
+2d_physics/layer_4="MapRooms"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"

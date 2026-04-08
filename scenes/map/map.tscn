@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ckacrdnxf55nh"]
+
+[ext_resource type="Script" uid="uid://dh8qt1ujs3ciw" path="res://scenes/map/map_generator.gd" id="1_sxf4j"]
+[ext_resource type="Script" uid="uid://6gal8u8lbti2" path="res://scenes/map/map.gd" id="1_tqkkf"]
+[ext_resource type="Texture2D" uid="uid://dbkjb8xj5mcps" path="res://assets/background.png" id="3_a2pkv"]
+
+[node name="Map" type="Node2D" unique_id=1944855779]
+script = ExtResource("1_tqkkf")
+
+[node name="visuals" type="Node2D" parent="." unique_id=997512489]
+
+[node name="lines" type="Node2D" parent="visuals" unique_id=1770420318]
+unique_name_in_owner = true
+
+[node name="rooms" type="Node2D" parent="visuals" unique_id=162543024]
+unique_name_in_owner = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1848817497]
+offset = Vector2(128, 72)
+
+[node name="MapGenerator" type="Node" parent="." unique_id=1701957662]
+script = ExtResource("1_sxf4j")
+
+[node name="MapBackground" type="CanvasLayer" parent="." unique_id=656546817]
+layer = -1
+
+[node name="Background" type="TextureRect" parent="MapBackground" unique_id=736696214]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_a2pkv")

@@ -1,9 +1,11 @@
 [gd_resource type="Resource" script_class="UnitData" format=3 uid="uid://dp232653if525"]
 
 [ext_resource type="Script" uid="uid://dv48pa308rwf4" path="res://scripts/resources/UnitData.gd" id="1_xul35"]
+[ext_resource type="Texture2D" uid="uid://dahgvtr7v23ik" path="res://assets/units/tank.png" id="2_tpn76"]
 
 [resource]
 script = ExtResource("1_xul35")
 name = "Basic Tank"
 base_health = 5
 base_attack = 2
+uSprite = ExtResource("2_tpn76")
