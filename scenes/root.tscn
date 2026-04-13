@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dttwfr2rmpx7e"]
 
 [ext_resource type="Script" uid="uid://cwl3oivxxmbgj" path="res://scripts/root.gd" id="1_j5px3"]
+[ext_resource type="PackedScene" uid="uid://ckacrdnxf55nh" path="res://scenes/map/map.tscn" id="2_twpsu"]
 
 [node name="root" type="Node" unique_id=55177069]
 script = ExtResource("1_j5px3")
+
+[node name="Map" parent="." unique_id=1944855779 instance=ExtResource("2_twpsu")]

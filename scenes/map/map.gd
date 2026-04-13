@@ -93,5 +93,6 @@ func _on_map_room_selected(room: Room) -> void:
 	last_room = room
 	floors_climbed += 1
 	
-	unlock_next_rooms()
+	EventBus.map_room_selected.emit(room)
+	#unlock_next_rooms()
 	#Events.map_exited.emit(room)

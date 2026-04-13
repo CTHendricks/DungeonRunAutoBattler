@@ -1,7 +1,7 @@
 extends Node
 
 var units: Array[UnitData] = [
-	InformationDB.units["tank"]
+	InformationDB.get_unit(InformationDB.UnitKey.TANK)
 ]
 
 func get_team_snapshot():

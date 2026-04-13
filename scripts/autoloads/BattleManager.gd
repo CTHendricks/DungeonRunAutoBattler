@@ -2,7 +2,8 @@ extends Node
 
 @onready var battlefield_scene = preload("res://scenes/battlefield.tscn")
 
-signal battle_finished(result)
+func _ready() -> void:
+	EventBus.battle_requested.connect(start_battle)
 
 func start_battle(config):
 	var battlefield = battlefield_scene.instantiate()
@@ -17,6 +18,6 @@ func start_battle(config):
 
 func _on_battle_over(result):
 	print("Battle Finished.")
-	emit_signal("battle_finished", result)
+	EventBus.battle_finished.emit(result)
 	print(get_child(0))
 	get_child(0).queue_free()

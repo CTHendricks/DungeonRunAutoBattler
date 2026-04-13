@@ -20,7 +20,7 @@ config/icon="res://icon.svg"
 InformationDB="*uid://4xp8xvxnksxl"
 RosterManager="*uid://tmbvmaoxcnfi"
 BattleManager="*uid://bvl5xc7fgih4m"
-GameManager="*uid://ca0vj0pgcgok6"
+EventBus="*uid://dk6q3wepcaaun"
 
 [display]
 
