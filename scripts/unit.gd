@@ -10,6 +10,9 @@ func set_from_data(unit_data):
 	data = unit_data
 	current_hp = unit_data.base_health
 	attack = unit_data.base_attack
+	$u_sprite.texture = unit_data.uSprite
+	$StatsUI.attack = attack
+	$StatsUI.health = current_hp
 
 func is_alive():
 	return current_hp > 0
@@ -20,6 +23,8 @@ func take_damage(amount):
 	if current_hp <= 0:
 		emit_signal("died", self)
 		queue_free()
+	
+	$StatsUI.update_health(current_hp)
 
 func perform_attack(target_side):
 	if target_side.is_empty():

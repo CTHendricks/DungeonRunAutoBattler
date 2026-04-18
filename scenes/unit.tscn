@@ -1,6 +1,18 @@
 [gd_scene format=3 uid="uid://rfx06hk62feo"]
 
 [ext_resource type="Script" uid="uid://ckofll72hxj7c" path="res://scripts/unit.gd" id="1_o7ajc"]
+[ext_resource type="Texture2D" uid="uid://dahgvtr7v23ik" path="res://assets/units/tank.png" id="2_1jvru"]
+[ext_resource type="PackedScene" uid="uid://djp8ixlsoc388" path="res://scenes/gui/stats_ui.tscn" id="3_gic7v"]
 
 [node name="unit" type="Node2D" unique_id=1470926163]
 script = ExtResource("1_o7ajc")
+
+[node name="u_sprite" type="Sprite2D" parent="." unique_id=971790741]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_1jvru")
+
+[node name="StatsUI" parent="." unique_id=2007953338 instance=ExtResource("3_gic7v")]
+offset_left = -12.0
+offset_top = 8.000001
+offset_right = 48.0
+offset_bottom = 31.000004

@@ -1,6 +1,59 @@
 [gd_scene format=3 uid="uid://bfwj0ki154lap"]
 
 [ext_resource type="Script" uid="uid://df82glehu5euo" path="res://scripts/battlefield.gd" id="1_5rve1"]
+[ext_resource type="Texture2D" uid="uid://dbkjb8xj5mcps" path="res://assets/background.png" id="2_j68fe"]
+[ext_resource type="PackedScene" uid="uid://rfx06hk62feo" path="res://scenes/unit.tscn" id="3_21s54"]
 
 [node name="battlefield" type="Node2D" unique_id=1252863901]
 script = ExtResource("1_5rve1")
+
+[node name="MapBackground" type="CanvasLayer" parent="." unique_id=1324617650]
+layer = -1
+
+[node name="Background" type="TextureRect" parent="MapBackground" unique_id=1920608471]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_j68fe")
+
+[node name="unit" parent="." unique_id=1470926163 groups=["enemies"] instance=ExtResource("3_21s54")]
+visible = false
+position = Vector2(67, 41)
+
+[node name="unit2" parent="." unique_id=10230318 groups=["enemies"] instance=ExtResource("3_21s54")]
+visible = false
+position = Vector2(96, 41)
+
+[node name="unit3" parent="." unique_id=600780416 groups=["enemies"] instance=ExtResource("3_21s54")]
+visible = false
+position = Vector2(125, 41)
+
+[node name="unit4" parent="." unique_id=768007500 groups=["enemies"] instance=ExtResource("3_21s54")]
+visible = false
+position = Vector2(154, 41)
+
+[node name="unit5" parent="." unique_id=760703522 groups=["enemies"] instance=ExtResource("3_21s54")]
+visible = false
+position = Vector2(183, 41)
+
+[node name="unit6" parent="." unique_id=1379870133 groups=["units"] instance=ExtResource("3_21s54")]
+visible = false
+position = Vector2(67, 88)
+
+[node name="unit7" parent="." unique_id=1914331485 groups=["units"] instance=ExtResource("3_21s54")]
+visible = false
+position = Vector2(96, 88)
+
+[node name="unit8" parent="." unique_id=299818250 groups=["units"] instance=ExtResource("3_21s54")]
+visible = false
+position = Vector2(125, 88)
+
+[node name="unit9" parent="." unique_id=134445590 groups=["units"] instance=ExtResource("3_21s54")]
+visible = false
+position = Vector2(154, 88)
+
+[node name="unit10" parent="." unique_id=1246317748 groups=["units"] instance=ExtResource("3_21s54")]
+visible = false
+position = Vector2(183, 88)
