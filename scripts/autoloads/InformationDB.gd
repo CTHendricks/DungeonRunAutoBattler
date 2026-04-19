@@ -34,6 +34,13 @@ func get_boss(key: String) -> BossData:
 	return _bosses.get(key)
 
 func get_battle_config(stage):
+	match stage:
+		"boss":
+			pass
+		"mini":
+			pass
+		"battle":
+			pass
 	if stage == "boss":
 		return {
 			"enemy_team": get_boss(BossKey.BASE_BOSS).enemy_team

@@ -39,13 +39,13 @@ func _start_battle_loop():
 		for u in player_units:
 			if u.is_alive():
 				u.perform_attack(enemy_units)
-				await get_tree().create_timer(2.0).timeout
+				await get_tree().create_timer(1.0).timeout
 		
 		#_tick(enemy_units, player_units)
 		for e in enemy_units:
 			if e.is_alive():
 				e.perform_attack(player_units)
-				await get_tree().create_timer(2.0).timeout
+				await get_tree().create_timer(1.0).timeout
 	
 	emit_signal("battle_over", {
 		"victory": enemy_units.is_empty()

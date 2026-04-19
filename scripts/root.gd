@@ -16,6 +16,10 @@ func _on_map_room_selected(room: Room) -> void:
 			var config = InformationDB.get_battle_config("battle")
 			map.hide_map()
 			EventBus.battle_requested.emit(config)
+		Room.Type.MINI:
+			var config = InformationDB.get_battle_config("boss")
+			map.hide_map()
+			EventBus.battle_requested.emit(config)
 		_:
 			map.unlock_next_rooms()
 
