@@ -7,8 +7,8 @@ const ICONS := {
 	Room.Type.NOT_ASSIGNED: [null, Vector2.ONE],
 	Room.Type.BATTLE: [preload("res://assets/units/attack.png"), Vector2.ONE],
 	Room.Type.MINI: [preload("res://assets/units/attack.png"), Vector2.ONE],
-	Room.Type.SHOP: [preload("res://assets/units/health.png"), Vector2.ONE],
-	Room.Type.BOSS: [preload("res://assets/units/attack.png"), Vector2.ONE]
+	Room.Type.SHOP: [preload("res://assets/units/shop.png"), Vector2.ONE],
+	Room.Type.BOSS: [preload("res://assets/units/boss.png"), Vector2.ONE]
 }
 
 @onready var sprite_2d: Sprite2D = $Visuals/Sprite2D

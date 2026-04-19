@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://5k0kyfdtflgx"]
+
+[ext_resource type="Texture2D" uid="uid://dbkjb8xj5mcps" path="res://assets/background.png" id="1_100s2"]
+
+[node name="shop" type="Node2D" unique_id=361258342]
+
+[node name="shopBackground" type="CanvasLayer" parent="." unique_id=563075249]
+
+[node name="background" type="TextureRect" parent="shopBackground" unique_id=813194154]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_100s2")
+
+[node name="goBack" type="Button" parent="shopBackground" unique_id=1127714305]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.5
+offset_top = -15.5
+offset_right = 35.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+text = "Go Back"

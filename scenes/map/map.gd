@@ -94,5 +94,3 @@ func _on_map_room_selected(room: Room) -> void:
 	floors_climbed += 1
 	
 	EventBus.map_room_selected.emit(room)
-	#unlock_next_rooms()
-	#Events.map_exited.emit(room)

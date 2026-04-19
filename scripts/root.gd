@@ -10,12 +10,14 @@ func _ready():
 	#GameManager.start_new_run()
 
 func _on_map_room_selected(room: Room) -> void:
-	if room.type == Room.Type.BATTLE:
-		var config = InformationDB.get_battle_config("battle")
-		map.hide_map()
-		EventBus.battle_requested.emit(config)
-	else:
-		map.unlock_next_rooms()
+	print(room.type)
+	match room.type:
+		Room.Type.BATTLE:
+			var config = InformationDB.get_battle_config("battle")
+			map.hide_map()
+			EventBus.battle_requested.emit(config)
+		_:
+			map.unlock_next_rooms()
 
 func _on_battle_finished(result) -> void:
 	if not result.get("victory", false):
