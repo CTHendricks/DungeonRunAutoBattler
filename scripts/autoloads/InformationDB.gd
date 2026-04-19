@@ -40,5 +40,5 @@ func get_battle_config(stage):
 		}
 	else:
 		return {
-			"enemy_team": [ get_enemy(EnemyKey.SLIME), get_enemy(EnemyKey.SLIME) ]
+			"enemy_team": [ get_enemy(EnemyKey.SLIME), get_enemy(EnemyKey.SLIME), get_enemy(EnemyKey.SLIME) ]
 		}

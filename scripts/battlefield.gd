@@ -19,7 +19,7 @@ func _spawn_units(player_team, enemy_team):
 		var inst = unit_scene.instantiate()
 		inst.set_from_data(u)
 		inst.connect("died", _on_unit_died)
-		inst.position = Vector2(100 - (count*30), 100)
+		inst.position = Vector2(100 - (count*40), 100)
 		add_child(inst)
 		player_units.append(inst)
 		count += 1
@@ -29,7 +29,7 @@ func _spawn_units(player_team, enemy_team):
 		var inst = unit_scene.instantiate()
 		inst.set_from_data(e)
 		inst.connect("died", _on_unit_died)
-		inst.position = Vector2(150 + (count*30), 100)
+		inst.position = Vector2(150 + (count*40), 100)
 		add_child(inst)
 		enemy_units.append(inst)
 		count += 1
@@ -69,15 +69,17 @@ func _tick(attacking, defending):
 			unit.perform_attack(defending)
 
 func _on_unit_died(unit):
-	if player_units.has(unit):
-		var count = 0
-		for u in enemy_units:
-			u.position = Vector2(100 + (count*30), 100)
+	var count = 0
+	if player_units.has(unit) and not player_units.is_empty():
+		player_units.erase(unit)
+		for u in player_units:
+			print("u YEP")
+			u.position = Vector2(100 + (count*40), 100)
+			count += 1
+	count = 0
 	if enemy_units.has(unit) and not enemy_units.is_empty():
-		var count = 0
+		enemy_units.erase(unit)
 		for e in enemy_units:
-			e.position = Vector2(150 + (count*30), 100)
-	
-	player_units.erase(unit)
-	enemy_units.erase(unit)
-	print(player_units, enemy_units)
+			print("e YEP")
+			e.position = Vector2(150 + (count*40), 100)
+			count += 1

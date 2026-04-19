@@ -7,6 +7,18 @@ const FLOORS = 11
 const MAP_WIDTH = 3
 
 var base_map = [1, 1, 1, 3, 1, 1, 1, 3, 1, 1, 1]
+var new_map = [
+	[Room.Type.BATTLE],
+	[Room.Type.BATTLE],
+	[Room.Type.MINI, Room.Type.MINI, Room.Type.MINI],
+	[Room.Type.SHOP],
+	[Room.Type.BATTLE],
+	[Room.Type.BATTLE],
+	[Room.Type.MINI, Room.Type.MINI, Room.Type.MINI],
+	[Room.Type.SHOP],
+	[Room.Type.BATTLE],
+	[Room.Type.BOSS]
+]
 
 var map_data: Array[Array]
 

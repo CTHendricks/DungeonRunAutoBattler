@@ -29,5 +29,5 @@ func take_damage(amount):
 func perform_attack(target_side):
 	if target_side.is_empty():
 		return
-	
+	$AnimationPlayer.play("attack")
 	target_side[0].take_damage(attack)

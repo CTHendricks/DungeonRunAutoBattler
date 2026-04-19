@@ -1,6 +1,8 @@
 extends Node
 
 var units: Array[UnitData] = [
+	InformationDB.get_unit(InformationDB.UnitKey.TANK),
+	InformationDB.get_unit(InformationDB.UnitKey.TANK),
 	InformationDB.get_unit(InformationDB.UnitKey.TANK)
 ]
 
